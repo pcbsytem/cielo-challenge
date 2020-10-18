@@ -1,0 +1,18 @@
+<div class="transaction-info">
+  <mat-card class="transaction-info-item mat-elevation-z3">
+    <mat-card-title>{{ total.quantidadeLancamentos }}</mat-card-title>
+    <mat-card-subtitle class="subtitle">Lançamentos</mat-card-subtitle>
+  </mat-card>
+
+  <mat-card class="transaction-info-item mat-elevation-z3">
+    <mat-card-title>{{ total.quantidadeRemessas }}</mat-card-title>
+    <mat-card-subtitle class="subtitle">Remessas</mat-card-subtitle>
+  </mat-card>
+
+  <mat-card class="transaction-info-item mat-elevation-z3">
+    <mat-card-title>{{
+      total.valorLancamentos | currency: "BRL"
+    }}</mat-card-title>
+    <mat-card-subtitle class="subtitle">Valor Lançamentos</mat-card-subtitle>
+  </mat-card>
+</div>
