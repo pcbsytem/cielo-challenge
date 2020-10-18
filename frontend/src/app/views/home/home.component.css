@@ -1,0 +1,26 @@
+.home {
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-chart {
+  flex: 1;
+  flex-basis: 80%;
+  margin-bottom: 16px;
+}
+
+.home-info {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 941px) {
+  .home-chart {
+    margin-right: 16px;
+  }
+}
