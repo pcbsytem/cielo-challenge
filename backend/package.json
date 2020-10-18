@@ -4,7 +4,7 @@
   "description": "This folder contains backend rules",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch lancamento-conta-legado.json --port 3000"
+    "start": "json-server --watch server.json --port 3000"
   },
   "author": "pcbsytem",
   "license": "ISC",
