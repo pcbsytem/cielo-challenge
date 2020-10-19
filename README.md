@@ -59,7 +59,7 @@ npm i
 ng serve
 ```
 
-- Rodando teste frontend
+- Rodando teste no frontend
 
 ```
 ng test
