@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TransactionInfoComponent } from './transaction-info.component';
 
 describe('TransactionInfoComponent', () => {
@@ -8,7 +9,8 @@ describe('TransactionInfoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TransactionInfoComponent ]
+      declarations: [ TransactionInfoComponent ],
+      imports: [ HttpClientModule, MatSnackBarModule ]
     })
     .compileComponents();
   });

@@ -8,7 +8,11 @@ import { TransationTotal } from '../transation-total.model';
   styleUrls: ['./transaction-info.component.css']
 })
 export class TransactionInfoComponent implements OnInit {
-  total: TransationTotal;
+  total: TransationTotal = {
+    quantidadeLancamentos: 0,
+    quantidadeRemessas: 0,
+    valorLancamentos: 0,
+  };
 
   constructor(private transactionService: TransactionService) { }
 
