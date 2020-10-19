@@ -21,7 +21,7 @@ Foi utilizado o <a href="https://angular.io/">Angular</a> na versão 10 e compon
 
 ## Rodando Projeto
 
-- Primeiro instale (Caso não tenha instalado)
+### Primeiro instale (Caso não tenha instalado)
 
 Git bash - <a href="https://gitforwindows.org/">https://gitforwindows.org/</a>
 
@@ -39,7 +39,7 @@ npm install -g @angular/cli
 git clone https://github.com/pcbsytem/cielo-challenge.git
 ```
 
-- Rodando backend
+### Rodando backend
 
 Instalar dependencias e rodar
 
@@ -49,7 +49,7 @@ npm i
 npm start
 ```
 
-- Rodando frontend
+### Rodando frontend
 
 Instalar dependências e rodar
 
@@ -59,7 +59,7 @@ npm i
 ng serve
 ```
 
-- Rodando teste no frontend
+### Rodando teste no frontend
 
 ```
 ng test
