@@ -17,7 +17,6 @@ Foi utilizado o <a href="https://angular.io/">Angular</a> na versão 10 e compon
 - Angular Chartist - <a href="https://willsoto.github.io/ng-chartist/demo/index.html">https://willsoto.github.io/ng-chartist/demo/index.html</a> (Gráficos)
 - Angular Material - <a href="https://material.angular.io/">https://material.angular.io/</a> (Componentes para layout)
 - JSON Server - <a href="https://github.com/typicode/json-server">https://github.com/typicode/json-server</a> (Para emular backend)
-- NodeJs
 
 ## Rodando Projeto
 
