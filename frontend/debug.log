@@ -1,0 +1,6 @@
+[1017/182647.864:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1018/181420.254:ERROR:file_io_win.cc(162)] CreateFile C:\Users\Patrick\AppData\Local\Temp\karma-66085714\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
+[1018/181420.255:ERROR:file_io_win.cc(171)] CreateFile C:\Users\Patrick\AppData\Local\Temp\karma-66085714\Crashpad\reports\4c4c8046-78dc-4387-bdcf-3de3ee7ad3a0.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
+[1018/181420.255:ERROR:crash_report_exception_handler.cc(99)] PrepareNewCrashReport failed
+[1018/182746.991:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1018/185101.977:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
