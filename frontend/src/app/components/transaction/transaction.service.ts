@@ -2,20 +2,23 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs';
+
 import { Transaction } from './transation.model';
 import { TransationTotal } from './transation-total.model';
+
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionService {
-  baseUrl = 'http://localhost:3000'
+  baseUrl = environment.API_URL;
   
   constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 
-  showMessage(message: string): void {
+  showMessage(message: string, duration: number = 3000): void {
     this.snackbar.open(message, 'X', { 
-      duration: 3000,
+      duration,
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     });
