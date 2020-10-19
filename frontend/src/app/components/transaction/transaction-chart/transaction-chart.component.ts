@@ -6,47 +6,32 @@ import {
 } from 'chartist';
 import { ChartEvent, ChartType } from 'ng-chartist';
 
+import { TransactionService } from '../transaction.service';
+import { Transaction } from '../transation.model';
+
 @Component({
   selector: 'app-transaction-chart',
   templateUrl: './transaction-chart.component.html',
   styleUrls: ['./transaction-chart.component.css']
 })
 export class TransactionChartComponent implements OnInit {
+  dataBar: IChartistData = {};
+  dataPie: IChartistData = {};
 
-  constructor() { }
+  typeBar: ChartType = 'Bar';
+  typePie: ChartType = 'Pie';
 
-  ngOnInit(): void {
-  }
-
-  type: ChartType = 'Bar';
-  data: IChartistData = {
-    labels: [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ],
-    series: [
-      [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-      [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-    ]
-  };
-
-  options: IBarChartOptions = {
+  optionsBar: IBarChartOptions = {
     axisX: {
       showGrid: false
     },
-    height: 300
+    height: 300,
   };
-
+  optionsPie: IBarChartOptions = {
+    donut: true,
+    height: 300,
+    showLabel: true
+  };
   events: ChartEvent = {
     draw: (data) => {
       if (data.type === 'bar') {
@@ -61,4 +46,27 @@ export class TransactionChartComponent implements OnInit {
       }
     }
   };
+
+  constructor(private transactionService: TransactionService) { }
+
+  ngOnInit(): void {
+    this.getTransaction();
+  }
+
+  getTransaction(): void {
+    this.transactionService.getTransaction().subscribe((transactions: Transaction[])  => {
+      this.dataBar = {
+        labels: transactions.map(item => item.descricaoGrupoPagamento),
+        series: [
+          transactions.map(item => item.valorLancamentoRemessa)
+        ],        
+      };
+      this.dataPie = {
+        labels: transactions.map(item => item.lancamentoContaCorrenteCliente.nomeSituacaoRemessa),
+        series: [
+          ...transactions.map(item => item.quantidadeLancamentoRemessa)
+        ],        
+      };
+    })
+  }
 }

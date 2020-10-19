@@ -1,0 +1,13 @@
+.chart {
+  display: flex;
+}
+
+.chart div {
+  width: 100%;
+}
+
+@media (max-width: 490px) {
+  .chart {
+    flex-wrap: wrap;
+  }
+}

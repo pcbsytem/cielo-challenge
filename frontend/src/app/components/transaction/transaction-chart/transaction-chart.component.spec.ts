@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { TransactionChartComponent } from './transaction-chart.component';
 
 describe('TransactionChartComponent', () => {
@@ -8,7 +9,8 @@ describe('TransactionChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TransactionChartComponent ]
+      declarations: [ TransactionChartComponent ],
+      imports: [ HttpClientModule, MatSnackBarModule ]
     })
     .compileComponents();
   });

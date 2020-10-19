@@ -1,8 +1,20 @@
 <mat-card class="chart mat-elevation-z3">
-  <x-chartist
-    [type]="type"
-    [data]="data"
-    [options]="options"
-    [events]="events"
-  ></x-chartist>
+  <div>
+    <h2>Quantidade remessas/Situação</h2>
+    <x-chartist
+      [type]="typePie"
+      [data]="this.dataPie"
+      [options]="optionsPie"
+      [events]="events"
+    ></x-chartist>
+  </div>
+  <div>
+    <h2>Grupo pagamento/Valor</h2>
+    <x-chartist
+      [type]="typeBar"
+      [data]="this.dataBar"
+      [options]="optionsBar"
+      [events]="events"
+    ></x-chartist>
+  </div>
 </mat-card>
