@@ -6,11 +6,6 @@ Frontend que consome dados de um arquivo json, com informações de lançamentos
 
 ![Screenshot_1](https://user-images.githubusercontent.com/19713358/96488541-8716db00-1214-11eb-8358-6f2ea6b0a25b.png)
 
-## Sobre
-
-O projeto é um desafio técnico da Cielo para a vaga de frontend, no qual o frontend consome dados de um json com informações de pagamentos. O desafio pede que, mostre as informações em forma de gráfico e tabela (Dashboard), de uma maneira que agregue valor.
-Foi utilizado o <a href="https://angular.io/">Angular</a> na versão 10 e componentes visuais do <a href="https://material.angular.io/">Material</a> e os gráficos do <a href="https://willsoto.github.io/ng-chartist/demo/index.html">Chartist</a>.
-
 ## Frameworks e libs
 
 - Angular - <a href="https://angular.io/">https://angular.io/</a> (Framework estrutural)
