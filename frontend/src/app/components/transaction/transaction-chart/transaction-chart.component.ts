@@ -54,7 +54,7 @@ export class TransactionChartComponent implements OnInit {
   }
 
   getTransaction(): void {
-    this.transactionService.getTransaction().subscribe((transactions: Transaction[])  => {
+    this.transactionService.getTransaction().subscribe((transactions: Transaction[]) => {
       this.dataBar = {
         labels: transactions.map(item => item.descricaoGrupoPagamento),
         series: [
@@ -67,6 +67,8 @@ export class TransactionChartComponent implements OnInit {
           ...transactions.map(item => item.quantidadeLancamentoRemessa)
         ],        
       };
-    })
+    }, (err) => {
+      this.transactionService.showMessage('Verifique se o servidor foi iniciado.')
+    });
   }
 }

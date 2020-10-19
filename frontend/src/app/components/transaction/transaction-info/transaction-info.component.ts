@@ -23,7 +23,9 @@ export class TransactionInfoComponent implements OnInit {
   getTransactionTotal(): void {
     this.transactionService.getTransactionTotal().subscribe(total => {
       this.total = total
-    })
+    }, (err) => {
+      this.transactionService.showMessage('Verifique se o servidor foi iniciado.')
+    });
   }
 
 }

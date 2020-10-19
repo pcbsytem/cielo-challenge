@@ -25,7 +25,9 @@ export class TransactionTableComponent implements OnInit {
   getTransaction(): void {
     this.transactionService.getTransaction().subscribe(transactions => {
       this.transactions = transactions
-    })
+    }, (err) => {
+      this.transactionService.showMessage('Verifique se o servidor foi iniciado.')
+    });
   }
 
 }
